@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
 import pandas as pd
-df = pd.read_csv("/content/Groceries_dataset.csv")
+df = pd.read_csv("Groceries_dataset.csv")
 print(df.head())
 basket = df.groupby(['Member_number', 'Date'])['itemDescription'].apply(list).reset_index()
 transactions = basket['itemDescription'].tolist()
